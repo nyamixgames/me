@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NYAMIX — Neon Coder</title>
-  <meta name="description" content="Nyamix — Mobile apps forged in the sprawl • Flutter • React Native • iOS • Android">
+  <title>NYAMIX — NETRUNNER FOR HIRE</title>
+  <meta name="description" content="Nyamix — Cross-platform ghost in the sprawl. Flutter. React Native. iOS. Android. No corpos. Pure chrome.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="NYAMIX — Mobile App Ghost">
-  <meta property="og:description" content="Building bleeding-edge cross-platform apps in the neon underbelly">
+  <meta property="og:title" content="NYAMIX — GHOST IN THE MACHINE">
+  <meta property="og:description" content="Jack in. Build bleeding-edge mobile decks in the neon underbelly. Contracts open — no trace.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nyamix.github.io/">
-  <meta property="og:image" content="https://via.placeholder.com/1200x630/0a001f/00ffea?text=NYAMIX">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630/0a001f/00ffea?text=NYAMIX+NETRUNNER">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,11 +29,7 @@
       --glitch: #ff0055;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
 
     body {
       font-family: 'Roboto Mono', monospace;
@@ -43,25 +39,19 @@
       overflow-x: hidden;
       position: relative;
       background-image: 
-        linear-gradient(rgba(5,0,10,0.92), rgba(10,0,21,0.88)),
+        linear-gradient(rgba(5,0,10,0.94), rgba(10,0,21,0.90)),
         url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="4" height="4" fill="%2305000a"/><circle cx="1" cy="1" r="0.7" fill="%23110033"/></svg>');
       background-attachment: fixed;
     }
 
-    /* Subtle scanlines */
     body::after {
       content: '';
       position: fixed;
       inset: 0;
-      background: repeating-linear-gradient(
-        to bottom,
-        transparent 0,
-        rgba(255,0,170,0.03) 1px,
-        transparent 2px
-      );
+      background: repeating-linear-gradient(to bottom, transparent 0, rgba(255,0,170,0.04) 1px, transparent 2px);
       pointer-events: none;
       z-index: 9999;
-      opacity: 0.4;
+      opacity: 0.45;
     }
 
     .container {
@@ -73,30 +63,26 @@
     }
 
     header {
-      padding: 140px 0 200px;
+      padding: 160px 0 220px;
       text-align: center;
-      position: relative;
     }
 
     h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: clamp(5rem, 18vw, 11rem);
+      font-size: clamp(5.5rem, 20vw, 12rem);
       font-weight: 900;
-      letter-spacing: -0.06em;
+      letter-spacing: -0.07em;
       color: transparent;
       background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta), var(--neon-purple), var(--neon-cyan));
       -webkit-background-clip: text;
       background-clip: text;
-      text-shadow: 
-        0 0 20px var(--neon-cyan),
-        0 0 40px var(--neon-magenta),
-        0 0 80px var(--neon-purple);
-      animation: neon-flicker 4s infinite alternate, hue-rotate 12s infinite linear;
+      text-shadow: 0 0 25px var(--neon-cyan), 0 0 50px var(--neon-magenta), 0 0 100px var(--neon-purple);
+      animation: neon-flicker 5s infinite alternate, hue-rotate 15s infinite linear;
     }
 
     @keyframes neon-flicker {
-      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; text-shadow: 0 0 20px var(--neon-cyan), 0 0 40px var(--neon-magenta); }
-      20%, 24%, 55% { opacity: 0.6; text-shadow: none; }
+      0%,18%,22%,25%,53%,57%,100% { opacity:1; text-shadow:0 0 25px var(--neon-cyan),0 0 50px var(--neon-magenta); }
+      20%,24%,55% { opacity:0.55; text-shadow:none; }
     }
 
     @keyframes hue-rotate {
@@ -104,7 +90,6 @@
       100% { filter: hue-rotate(360deg); }
     }
 
-    /* Glitch effect on hover / load */
     .glitch {
       position: relative;
       display: inline-block;
@@ -114,62 +99,61 @@
     .glitch::after {
       content: attr(data-text);
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.8;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      opacity: 0.85;
     }
 
     .glitch::before {
-      left: 2px;
-      text-shadow: -2px 0 var(--glitch);
-      animation: glitch-anim 3s infinite linear alternate-reverse;
-      clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+      left: 3px;
+      text-shadow: -3px 0 var(--glitch);
+      animation: glitch-anim 4s infinite alternate-reverse;
+      clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
     }
 
     .glitch::after {
-      left: -2px;
-      text-shadow: 2px 0 var(--neon-cyan);
-      animation: glitch-anim 2.5s infinite linear alternate-reverse;
-      clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+      left: -3px;
+      text-shadow: 3px 0 var(--neon-cyan);
+      animation: glitch-anim 3s infinite alternate-reverse;
+      clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
     }
 
     @keyframes glitch-anim {
       0% { transform: translate(0); }
-      20% { transform: translate(-4px, 2px); }
-      40% { transform: translate(4px, -2px); }
-      60% { transform: translate(-2px, 1px); }
-      80% { transform: translate(2px, -1px); }
+      20% { transform: translate(-5px, 3px); }
+      40% { transform: translate(5px, -3px); }
+      60% { transform: translate(-3px, 2px); }
+      80% { transform: translate(3px, -2px); }
       100% { transform: translate(0); }
     }
 
     .subtitle {
-      font-size: 1.6rem;
+      font-size: 1.75rem;
       color: var(--text-dim);
-      margin: 2rem 0 3.5rem;
-      text-shadow: 0 0 15px rgba(0,255,234,0.4);
-      letter-spacing: 0.08em;
+      margin: 2.2rem 0 4rem;
+      text-shadow: 0 0 18px rgba(0,255,234,0.5);
+      letter-spacing: 0.1em;
+      line-height: 1.5;
     }
 
     .btn-group {
       display: flex;
-      gap: 2rem;
+      gap: 2.2rem;
       justify-content: center;
       flex-wrap: wrap;
     }
 
     .btn {
       position: relative;
-      padding: 1rem 2.8rem;
-      font-size: 1.3rem;
+      padding: 1.1rem 3rem;
+      font-size: 1.35rem;
       font-weight: 500;
       text-decoration: none;
       border-radius: 0;
       overflow: hidden;
-      transition: all 0.4s ease;
+      transition: all 0.45s ease;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.18em;
     }
 
     .btn::before {
@@ -177,41 +161,39 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(45deg, transparent, var(--neon-magenta), transparent);
-      transform: translateX(-100%);
-      transition: transform 0.6s ease;
+      transform: translateX(-120%);
+      transition: transform 0.7s ease;
     }
 
-    .btn:hover::before {
-      transform: translateX(100%);
-    }
+    .btn:hover::before { transform: translateX(120%); }
 
     .btn-primary {
       color: var(--bg);
       background: var(--neon-cyan);
-      box-shadow: 0 0 30px rgba(0,255,234,0.6);
+      box-shadow: 0 0 35px rgba(0,255,234,0.7);
       border: 2px solid var(--neon-cyan);
     }
 
     .btn-primary:hover {
       color: var(--neon-cyan);
       background: transparent;
-      box-shadow: 0 0 50px rgba(0,255,234,0.9);
+      box-shadow: 0 0 60px rgba(0,255,234,1);
     }
 
     .btn-outline {
       color: var(--neon-magenta);
       border: 2px solid var(--neon-magenta);
-      box-shadow: 0 0 25px rgba(255,0,170,0.5);
+      box-shadow: 0 0 30px rgba(255,0,170,0.6);
     }
 
     .btn-outline:hover {
       color: var(--bg);
       background: var(--neon-magenta);
-      box-shadow: 0 0 45px rgba(255,0,170,0.8);
+      box-shadow: 0 0 55px rgba(255,0,170,0.95);
     }
 
     section {
-      padding: 140px 0;
+      padding: 160px 0;
     }
 
     .contact {
@@ -221,29 +203,29 @@
 
     h2 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 4.5rem;
-      margin-bottom: 2.5rem;
-      text-shadow: 0 0 30px var(--neon-purple);
+      font-size: 5rem;
+      margin-bottom: 3rem;
+      text-shadow: 0 0 35px var(--neon-purple);
     }
 
     .highlight {
       color: var(--neon-magenta);
-      text-shadow: 0 0 20px var(--neon-magenta);
+      text-shadow: 0 0 25px var(--neon-magenta);
     }
 
     footer {
       text-align: center;
-      padding: 6rem 0 8rem;
+      padding: 7rem 0 9rem;
       color: #444466;
-      font-size: 1rem;
+      font-size: 1.05rem;
       border-top: 1px solid #1a0033;
     }
 
     @media (max-width: 640px) {
-      header { padding: 100px 0 160px; }
-      h1 { font-size: clamp(4rem, 14vw, 8rem); }
-      h2 { font-size: 3rem; }
-      .subtitle { font-size: 1.3rem; }
+      header { padding: 120px 0 180px; }
+      h1 { font-size: clamp(4.5rem, 16vw, 9rem); }
+      h2 { font-size: 3.5rem; }
+      .subtitle { font-size: 1.4rem; }
     }
   </style>
 </head>
@@ -253,41 +235,44 @@
   <div class="container">
     <h1 class="glitch" data-text="NYAMIX">NYAMIX</h1>
     <div class="subtitle">
-      MOBILE APPS FROM THE SPRAWL<br>
-      FLUTTER • REACT NATIVE • iOS • ANDROID • NIGHT CITY CODE
+      NETRUNNER FOR HIRE • GHOST IN THE SPRAWL<br>
+      JACK IN TO FLUTTER & REACT NATIVE DECKS • IOS + ANDROID CHROME<br>
+      NO CORPOS • NO TRACE • CLEAN CODE FROM THE NEON UNDERBELLY
     </div>
 
     <div class="btn-group">
-      <a href="mailto:nyamix.dev@gmail.com" class="btn btn-primary">CONNECT →</a>
-      <a href="#contact" class="btn btn-outline">HIRE GHOST</a>
+      <a href="mailto:nyamix.dev@gmail.com" class="btn btn-primary">JACK IN →</a>
+      <a href="#contact" class="btn btn-outline">DELTA A CONTRACT</a>
     </div>
   </div>
 </header>
 
 <section class="contact" id="contact">
   <div class="container">
-    <h2>RUN THE <span class="highlight">CODE</span> WITH ME</h2>
+    <h2>RUN THE <span class="highlight">NEON</span> WITH ME, CHOOM</h2>
     
-    <p style="font-size:1.5rem; max-width:720px; margin:0 auto 3.5rem; color:var(--text-dim); text-shadow:0 0 15px rgba(136,204,255,0.3);">
-      Cross-platform mercenary • Open for contracts • Fast turnaround • No corpos
+    <p style="font-size:1.6rem; max-width:780px; margin:0 auto 4rem; color:var(--text-dim); text-shadow:0 0 20px rgba(136,204,255,0.4); line-height:1.6;">
+      Mobile deck mercenary • Cross-platform shadow ops • Flutter. React Native. No bloat.<br>
+      Slots open in the sprawl • Fast delta • Flatline bugs before they chrome you<br>
+      Solo runner • No middle-man • Just you, me, and the datastream
     </p>
 
-    <div class="btn-group" style="margin-bottom: 4rem;">
-      <a href="mailto:nyamixgames@gmail.com?subject=CONTRACT%20—%20NYAMIX" 
+    <div class="btn-group" style="margin-bottom: 5rem;">
+      <a href="mailto:nyamix.dev@gmail.com?subject=CONTRACT%20OFFERING%20—%20NYAMIX" 
          class="btn btn-primary" 
-         style="font-size:1.4rem; padding:1.3rem 3.5rem;">
-        INITIATE CONTACT →
+         style="font-size:1.45rem; padding:1.4rem 4rem;">
+        INITIATE DROP →
       </a>
     </div>
 
-    <p style="color:#666688; font-size:1.15rem; text-shadow:none;">
-      Encrypted drop: email only • Expect ping < 12h
+    <p style="color:#666688; font-size:1.2rem; text-shadow:none;">
+      ENCRYPTED CONTACT: EMAIL ONLY • PING BACK < 8 HOURS • NO corpos, NO LOGS
     </p>
   </div>
 </section>
 
 <footer>
-  <p>©  NYAMIX • GHOST IN THE MACHINE • PURE CODE • NO TRACE</p>
+  <p>©  NYAMIX • GHOST IN THE MACHINE • PURE CODE • NO FLESH • RUN SILENT</p>
 </footer>
 
 </body>
